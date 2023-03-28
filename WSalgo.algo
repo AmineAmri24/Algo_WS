@@ -1,0 +1,51 @@
+ALGORITHM sentence length
+VAR
+    i : INTEGER := 0
+    sentence : string := "the best in the world"
+    count : INTEGER := 0
+BEGIN
+    i := 0
+    FOR i FROM 0 TO sentence.length STEP DO
+        IF ( i< sentence.length; sentence[i] !="") THEN
+        count = count + 1
+        i= i + 1
+        END_IF  
+    END_FOR
+    Write(count)
+END
+
+
+ALGORITHM nbre_of_word_in_sentence
+VAR
+    sentence : string := "the best in the world"
+    count: INTEGER := 1
+    i: integer :=0
+BEGIN
+    WHILE (sentence[sentence.length]=".") DO
+        i = 0
+        FOR i in sentence  DO
+            IF (sentence[i]=" ") THEN
+                count = count + 1
+                i= i+1
+            END_IF
+        END_FOR
+    END_WHILE
+    Write(count)
+END
+
+
+
+ALGORITHM nb_of_vowels_in_sentence
+VAR
+    sentence : string := "the best in the world"
+    count: integer := 0
+    vowels : char := ['a','e','i','o','u']
+BEGIN
+    i = 0
+    FOR i in sentence  DO
+        IF (sentence[i] in vowels) THEN
+            count = count + 1
+        END_IF
+    END_FOR
+    Write(count)
+END
